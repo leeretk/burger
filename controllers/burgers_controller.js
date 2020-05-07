@@ -2,12 +2,12 @@ var express = require("express");
 
 var router = express.Router();
 
-// Import the model (burgers.js) to use its database functions.
-var burger = require("../models/burgers.js");
+// Import the model (burger.js) to use its database functions.
+var burger = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-  burger.all(function(data) {
+  burgers.all(function(data) {
     var hbsObject = {
       burgers: data
     };
@@ -17,18 +17,18 @@ router.get("/", function(req, res) {
 });
 //create call burger model call create --- has column names (name and devoured) -- sends the actual value 
 router.post("/api/burgers", function(req, res) {
-  burger.create(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(result) {
+  burgers.create(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(result) {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
   });
 });
 
-router.put("/api/burgers/:id", function(req, res) {
+router.put("/api/burger/:id", function(req, res) {
   var condition = "id = " + req.params.id;   ///has where "condition"
 
   console.log("condition", condition);
 //sends the value of what to update and then crate the condition on ln 27 and pass the condition on line 35. 
-  burger.update(
+  burgers.update(
     {
       devoured: req.body.devoured
     },
