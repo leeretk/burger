@@ -26,10 +26,9 @@ img {
   padding: 10px;
 }
 iframe {
-  width: 450px;
-  height: 400px;
+  height: 350px;
   padding: 20px;
-  border-color: maroon;
+  border: maroon;
   background-color: maroon;
 }
 .cardBodyMiddle {
@@ -45,6 +44,13 @@ button {
   background-color: maroon;
   color: white;
 }
+.button-add-burger {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: maroon;
+  color: white;
+  width: 100%;
+}
 .card-deck {
   background-color: maroon;
   border-radius: 0;
@@ -53,14 +59,11 @@ button {
 .card-footer {
   color: maroon;
 }
-h1 h2{
-  color: blue;
-}
 input {
   width: 100%;
-  padding-bottom: 10px;
+  padding: 10px;
 }
 .card {
   border-radius: 0%;
-  border-color: maroon;
+  border: maroon;
 }
