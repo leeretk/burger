@@ -3,17 +3,48 @@ li {
   margin: 5px;
   background: #faebd7;
 }
-
 .label {
   font-weight: bold;
 }
-
 .create-update-form {
   padding: 5px;
   margin: 5px;
   background: aqua;
 }
-
 .form-group {
   margin-bottom: 5px;
+}
+.wrapper {
+  margin: 0 auto;
+  padding: 50px;
+  width: 1500px;
+}
+video {
+position: relative;
+padding-bottom: 50%;
+padding: top 25px;
+height: 0px;
+}
+img {
+  width: 250px;
+  height: 250px;
+
+}
+.videowrapper iframe {
+position: absolute;
+left: 0px;
+top: 0px;
+right: 0px;
+height: 100%;
+width: 100px;
+}
+iframe {
+  width: 100%;
+}
+li {
+  background-color: wheat;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 50%;
+  font-family: sans-serif;
 }

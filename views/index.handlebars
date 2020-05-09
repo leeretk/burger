@@ -1,9 +1,18 @@
 
-<h1>Eat-Da-Burger!</h1>
+<div class="wrapper">
+      <h1 class="text-center">Eat-Da-Burger!</h1>
+      <h2 class="text-center">Everybody Wants Some!</h2>
+              <iframe class="videowrapper" width="1280" height="720" src="https://www.youtube.com/embed/CxZy3Tr2wQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <br>
+              <img src="../img/betterOffDeadBurger.JPG" alt="burger">
+              <br>
 
 <main>
+
+      <div class="row">
+            <div>
+      </div>
   <div class="container">
-    <div class="row">
       <div class="col s6">
         {{#each burgers}}
           {{#unless this.devoured}}
@@ -15,9 +24,6 @@
           {{/unless}}
         {{/each}}
       </div>
-
-      <h2>Everybody Wants Some!</h2>
-
       <div class="col s6">
         {{#each burgers}}
           {{#if this.devoured}}
@@ -32,19 +38,15 @@
     </div>
   </div>
 </main>
-<h2>I Want Some Too!</h2>
 
 <h2>Add A Burger Option</h2>
 
 <div class="row">
   <div class="col s12">
     <form action="/burgers" method="POST">
-      <input type="text" id="name" name="burger_name" placeholder="Uber Delicious Burger">
+      <input type="text" id="name" name="burger_name" placeholder="I want some too!">
       <button type="submit" class="addBurgerButton">Add The Burger</button>
     </form>
   </div>
 </div>
-
-{{!-- https://www.youtube.com/watch?v=CxZy3Tr2wQM --}}
-{{!-- https://i.gifer.com/jPI.mp4 --}}
-{{!-- https://i.gifer.com/TF5O.mp4 --}}
+</div>
