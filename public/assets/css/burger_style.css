@@ -19,18 +19,7 @@ li {
   padding: 50px;
   width: 1500px;
 }
-video {
-position: relative;
-padding-bottom: 50%;
-padding: top 25px;
-height: 0px;
-}
-img {
-  width: 250px;
-  height: 250px;
-
-}
-.videowrapper iframe {
+.videowrapper{
 position: absolute;
 left: 0px;
 top: 0px;
@@ -39,12 +28,10 @@ height: 100%;
 width: 100px;
 }
 iframe {
-  width: 100%;
+  padding-bottom: 50%;
+  padding: top 25px;
 }
-li {
-  background-color: wheat;
-  margin-bottom: 10px;
-  padding: 10px;
-  width: 50%;
-  font-family: sans-serif;
+img {
+  width: 250px;
+  height: 250px;
 }
