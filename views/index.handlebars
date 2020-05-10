@@ -1,102 +1,119 @@
+@@ -0,0 +1,107 @@
 <div class="text-center wrapper">
 
   <h1 class="text-center" style="color: aliceblue;">Eat-Da-Burger!</h1>
   <h2 class="text-center" style="color: aliceblue;">Everybody Wants Some!</h2>
 
+  {{!--//YOU TUBE VIDEO
+//======================== --}}
   <div class="card">
-    <div class="card-deck">
-
-      <div class="card text-center">
-        <iframe src="https://www.youtube.com/embed/CxZy3Tr2wQM"></iframe>
+      <div class="card-deck">
+          <div class="card text-center">
+            <iframe src="https://www.youtube.com/embed/CxZy3Tr2wQM"></iframe>
+          </div>
       </div>
-
-    </div>
   <div>
 
-  <div class="card-deck">
+{{!--//BUILD A BURGER (POST / PUT NEW DATA IN BURGER)
+//======================== --}}
+<div class="card-deck">
+  <div class="card">
 
-    <div class="card">
+      <img class="card-img-top" src="assets/img/bunTop.jpg">
+
+        <div class="card-body">
+          <h5 class="card-title">Click a Burger or Topping to Devour it!
+          </h5>
+          
+          <p class="card-text ">
+              <div class="col s6 new-burger-name">
+                  <ul>
+                    {{#each burgers}}
+                      {{#if devoured}}
+                          {{> burgers/burger-block devour=true}}
+                      {{/if}}
+                    {{/each}}
+                  </ul>                  
+              <div>
+          </P>
+          
+          <form class="add-burger">
+            <label for="devour-burger"></label>
+              <button type="submit"> {{burger_name}}</button>
+          </form>
     
-          <img class="card-img-top" src="assets/img/bunTop.jpg">
-
-          <div class="card-body">
-            <h5 class="card-title">Click a Burger or Topping to Devour it!</h5>
-            <p class="card-text">
-            <div class="col s6">
-              {{#each burgers}}
-              {{#unless this.devoured}}
-              <div>              
-                
-                <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
-
-                  <button type="submit" class='burgerAvailable'> {{this.burger_name}}</button>
-                </form>
-              </div>
-              {{/unless}}
-              {{/each}}
-            </div>
-            <p>
-              {{this.burger_name}}
-            </p>
-            <img class="card-img-top" src="assets/img/bunBottom.jpg">
-          </div>
-          <div class="card-footer">
-
-            <small class="text-muted">Cheesy Mushroom Burger Time!</small>
-          </div>
+          <img class="card-img" src="assets/img/bunBottom.jpg">
         </div>
 
+        <div class="card-footer">
+            <medium class="text-muted">Cheesy Mushroom Burger Time!</medium>
+          </div>
+    </div>
+</div>
+    </div>
+
+
+{{!--//ADD A NEW BURGER OR TOPPING
+//======================== --}}
         <div class="card">
           <div class="card-body cardBodyMiddle">
             <div class="row text-center">
+              <p class="card-text">
+              <h3>I Want Some Too!!! <br><br> Burger's and Toppings you would like to Devour!</h3>
+              </p>
 
-            <p class="card-text"><h3>I Want Some Too!!! <br><br> Burger's and Toppings you would like to Devour!</h3></p>
-              <form class="create-form">
-                  
-                  <input type="text" id="name" name="burger_name" placeholder="I want some too!">
+              <form class="add-burger">
 
-                  <button type="submit" class="button-add-burger">Add Burger and Toppings</button>
+                <div>
+                  <label for="new-burger-name"></label>
+                  <input type="text" id="new-burger-name" placeholder="I want some too!">
+                </div>
+
+                <button type="submit" class="add-burger">Add Burger and Toppings</button>
 
               </form>
-
-             </div>
-
+            </div>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Cheesy Bacon Burger Time!</small>
+            <medium class="text-muted">Cheesy Bacon Burger Time!</medium>
           </div>
         </div>
 
+
+
+
+
+
         <div class="card">
-
           <img class="card-img-top" src="/assets/img/betterOffDeadBurger.jpg">
-
+          
           <div class="card-body">
             <h5 class="card-title">Burgers you Devoured!</h5>
             <div class="col s6">
-              {{#each burgers}}
-              {{#if this.devoured}}
-              <div class='burgerEaten'>
-                <div>
-                  {{this.burger_name}}
-                </div>
-              </div>
-              {{/if}}
-              {{/each}}
+
+              <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block devour=false}}
+                {{/if}}
+                {{/each}}
+              </ul>
             </div>
             <br>
             <p class="card-text">YUMMY, YUMMY, YUMMY!</p>
-              <li>
-                {{burger_name}}
-                    <button class="change-devoured" data-id="{{id}}" data-newdevour="{{devour}}">
-                      {{#if devoured}}DEVOUR TIME!{{else}}NOT HUNGRY!{{/if}}
-                    </button>
-                  <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
-              </li>
+            <div class="form-group">
+              <label for="devoured"></label><br>
+              <input type="radio" {{this.burger_name}} value="1" checked> Devoured!
+              <br>
+              <input type="radio" {{this.burger_name}} value="0"> No Longer Hungry!
+            </div>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Cheesy Cheesy Burger Time!</small>
+            <medium class="text-muted">Cheesy Cheesy Burger Time!</medium>
           </div>
         </div>
       </div>
+
+
+
     </div> {{!--  end wrapper --}}
