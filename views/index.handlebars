@@ -22,36 +22,38 @@
       <img class="card-img-top" src="assets/img/bunTop.jpg">
 
         <div class="card-body">
+
           <h5 class="card-title">Click a Burger or Topping to Devour it!
           </h5>
           
-          <p class="card-text ">
-              <div class="col s6 new-burger-name">
-                  <ul>
-                    {{#each burgers}}
-                      {{#if devoured}}
-                          {{> burgers/burger-block devour=true}}
-                      {{/if}}
-                    {{/each}}
-                  </ul>                  
-              <div>
-          </P>
-          
           <form class="add-burger">
-            <label for="devour-burger"></label>
-              <button type="submit"> {{burger_name}}</button>
+
+              <div class="form-group">
+
+                    <p class="card-text ">
+                        <div class="col s6 new-burger-name">
+                            <ul>
+                              {{#each burgers}}
+                              {{#if devoured=false}}
+                                   <li>{{this.burger_name}}</li>
+                                {{/if}}
+                              {{/each}}
+                            </ul>                  
+                        <div>
+                    </P>
+  
+                <label for="devour-burger"></label>
+          
+                <button type="submit"></button>
+              </div>
+          
           </form>
     
           <img class="card-img" src="assets/img/bunBottom.jpg">
         </div>
-
-        <div class="card-footer">
-            <medium class="text-muted">Cheesy Mushroom Burger Time!</medium>
-          </div>
     </div>
 </div>
     </div>
-
 
 {{!--//ADD A NEW BURGER OR TOPPING
 //======================== --}}
@@ -62,27 +64,20 @@
               <h3>I Want Some Too!!! <br><br> Burger's and Toppings you would like to Devour!</h3>
               </p>
 
-              <form class="add-burger">
+              <form class="add-burger ">
 
                 <div>
                   <label for="new-burger-name"></label>
-                  <input type="text" id="new-burger-name" placeholder="I want some too!">
+                  <input type="text" id="new-burger-name" class="text-center" placeholder="I want some too!">
                 </div>
 
-                <button type="submit" class="add-burger">Add Burger and Toppings</button>
+                <button type="submit" id="add-burger" class="add-burger button-add-burger">Add Burger and Toppings</button>
 
               </form>
             </div>
           </div>
-          <div class="card-footer">
-            <medium class="text-muted">Cheesy Bacon Burger Time!</medium>
-          </div>
+         
         </div>
-
-
-
-
-
 
         <div class="card">
           <img class="card-img-top" src="/assets/img/betterOffDeadBurger.jpg">
@@ -93,27 +88,38 @@
 
               <ul>
                 {{#each burgers}}
-                {{#if devoured}}
-                {{> burgers/burger-block devour=false}}
+                  {{#if devoured=true}
+                    <li>{{this.burger_name}}</li>
                 {{/if}}
                 {{/each}}
               </ul>
             </div>
             <br>
             <p class="card-text">YUMMY, YUMMY, YUMMY!</p>
-            <div class="form-group">
-              <label for="devoured"></label><br>
-              <input type="radio" {{this.burger_name}} value="1" checked> Devoured!
+            
+           <div class="form-group">
+              
+              <button class="devour-burger" value="1" checked> Devoured!</button>
               <br>
-              <input type="radio" {{this.burger_name}} value="0"> No Longer Hungry!
+              
+              <button type="button" class="delete-burger" value="0"> No Longer Hungry!</button>
+
+                  <li>
+                    {{burger_name}}
+                    <label for="devoured"></label><br>
+                    <button class="change-devoured" data-id="{{id}}" data-newdevour="{{devoured}}">
+                        {{#if sleep}}DEVOUR TIME!{{else}}I am no longer Hungry!{{/if}}
+                    </button>
+                    <label for="devoured"></label><br>  
+                    <button class="delete-burger" data-id="{{this.id}}">No Longer Hungry!</button>
+
+                  </li>
             </div>
+
           </div>
-          <div class="card-footer">
-            <medium class="text-muted">Cheesy Cheesy Burger Time!</medium>
-          </div>
+
         </div>
       </div>
-
 
 
     </div> {{!--  end wrapper --}}
