@@ -6,7 +6,6 @@ var router = express.Router();
 var burger = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.
-
 router.get("/", function(req, res) {
   burger.all(function(data) {
     var hbsObject = {
@@ -15,20 +14,19 @@ router.get("/", function(req, res) {
     console.log(hbsObject);
     res.render("index", hbsObject);
   });
-  console.log("GET PROCESSED")
+  console.log("GET WAS PROCESSED")
 });
 
-//create call burger model call create --- has column names (name and devoured) -- sends the actual value
+//create burger model call --- has column names (name and devoured) -- sends the actual value
 router.post("/api/burgers", function(req, res) {
   burgers.create([
-    "burger_name"
-    ,"devoured"], 
+    "burger_name" ,"devoured"], 
     [
       req.body.burger_name
       ,req.body.devoured]
       ,function(result) {
        
-      // Send back the ID of the new quote
+      // Send back the ID of the new burger
     res.json({ id: result.insertId });
   });
   console.log("POST PROCESSED")
@@ -41,7 +39,7 @@ router.put("/api/burgers/:id", function(req, res) {
 
   console.log("condition", condition);
 //sends the value of what to update and then create the condition on ln 27 and pass the condition on line 35. 
-  burgers.update(
+  burger.update(
     {
       devoured: req.body.devoured
     },
@@ -54,7 +52,7 @@ router.put("/api/burgers/:id", function(req, res) {
       res.status(200).end();
     }
   );
-  console.log("PUT PROCESSED")
+  console.log("PUT WAS PROCESSED")
 
 });
 

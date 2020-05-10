@@ -34,9 +34,9 @@
                         <div class="col s6 new-burger-name">
                             <ul>
                               {{#each burgers}}
-                              {{#if devoured=false}}
-                                   <li>{{this.burger_name}}</li>
-                                {{/if}}
+                              {{#unless devoured}}
+                                   <li>{{>burgers/burger-block devoured=true}}</li>
+                                {{/unless}}
                               {{/each}}
                             </ul>                  
                         <div>
@@ -63,15 +63,16 @@
               <p class="card-text">
               <h3>I Want Some Too!!! <br><br> Burger's and Toppings you would like to Devour!</h3>
               </p>
-
+                    
+          {{!-- //create new burger form --}}
               <form class="add-burger ">
 
                 <div>
                   <label for="new-burger-name"></label>
-                  <input type="text" id="new-burger-name" class="text-center" placeholder="I want some too!">
+                  <input type="text" id="new-burger-name" name="burger_name" class="text-center" placeholder="I want some too!">
                 </div>
 
-                <button type="submit" id="add-burger" class="add-burger button-add-burger">Add Burger and Toppings</button>
+                <button type="submit" class="button-add-burger">Add Burger and Toppings</button>
 
               </form>
             </div>
@@ -82,39 +83,24 @@
         <div class="card">
           <img class="card-img-top" src="/assets/img/betterOffDeadBurger.jpg">
           
+          {{!-- //-burgers devoured --}}
           <div class="card-body">
-            <h5 class="card-title">Burgers you Devoured!</h5>
+            <h5 class="card-title">Burgers to Devour!</h5>
             <div class="col s6">
-
               <ul>
-                {{#each burgers}}
-                  {{#if devoured=true}
-                    <li>{{this.burger_name}}</li>
-                {{/if}}
-                {{/each}}
+                    {{#each burgers}}
+                     {{#if devoured}}
+                        {{>burgers/burger-block devoured=false}}
+                    {{/if}}
+                    {{/each}}
               </ul>
             </div>
             <br>
             <p class="card-text">YUMMY, YUMMY, YUMMY!</p>
             
            <div class="form-group">
-              
-              <button class="devour-burger" value="1" checked> Devoured!</button>
-              <br>
-              
-              <button type="button" class="delete-burger" value="0"> No Longer Hungry!</button>
-
-                  <li>
-                    {{burger_name}}
-                    <label for="devoured"></label><br>
-                    <button class="change-devoured" data-id="{{id}}" data-newdevour="{{devoured}}">
-                        {{#if sleep}}DEVOUR TIME!{{else}}I am no longer Hungry!{{/if}}
-                    </button>
-                    <label for="devoured"></label><br>  
-                    <button class="delete-burger" data-id="{{this.id}}">No Longer Hungry!</button>
-
-                  </li>
-            </div>
+              <label for="devoured">Hungry?</label>
+           </div>
 
           </div>
 
