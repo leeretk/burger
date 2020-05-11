@@ -45,7 +45,7 @@
             <div class="row">
               <p class="card-text">
                  <div class="col s6 text-center">
-              <h3>I Want Some Too!!! <br><br> Burger's and Toppings you would like to Devour!</h3>
+              <h3>I Want Some Too!!! <br><br> Enter Burger's and Toppings you would like to Devour!</h3>
               </p>
               <form class="add-burger">
                 <div>
@@ -59,18 +59,18 @@
           </div>
         </div>
 
-{{!-- //-burgers devoured --}}
+{{!-- //delete burgers devoured --}}
 <div class="card">
   <img class="card-img-top" src="/assets/img/betterOffDeadBurger.jpg">
   <div class="card-body">
-    <h5 class="card-title">Burgers Devoured!</h5>
+    <h5 class="card-title">Click to Delete Devoured Burger!</h5>
     <div class="col s6">
     </div>
     <br>
-    <p class="card-text">Click to Delete Devoured Burger</p>
+    <p class="card-text"></p>
     <div class="form-group">
       <label for="devoured">
-        {{>burgers/burger-to-devour devoured=false}}
+        {{>burgers/burger-to-devour}}
       </label>
     </div>
   </div>
