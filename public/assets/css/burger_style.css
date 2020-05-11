@@ -4,7 +4,8 @@ li {
   background: #faebd7;
 }
 .label {
-  font-weight: bold;
+  font-weight: bolder;
+  font-size: 14px;
 }
 .create-update-form {
   padding: 5px;

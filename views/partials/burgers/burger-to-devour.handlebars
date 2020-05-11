@@ -2,8 +2,8 @@
 	{{#each burgers}}
 	{{#unless this.devoured}}
 	<div>
-		<form action="/burgers/{{this.id}}?_method=DELETE" method="POST">
-			<button type="submit" class="delete-burger button-add-burger" data-id="{{id}}"
+		<form action="/burgers/{{this.id}}?_method=PUT" method="POST">
+			<button type="submit" class="devour-burger button-add-burger" data-id="{{id}}"
 				data-newDevour="{{devour}}">{{this.burger_name}}
 			</button>
 		</form>
@@ -11,8 +11,4 @@
 	{{/unless}}
 	{{/each}}
 </div>
-
-<audio id="myAudio">
-  <source src="/public/assets/mp3/Bite-SoundBible.com-2056759375.mp3" type="audio/ogg">
- </audio>
 

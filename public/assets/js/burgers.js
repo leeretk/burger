@@ -19,6 +19,7 @@ $(function() {
         function playAudio() { 
           x.play(myAudio); 
         } 
+        play();
 
       // Send the PUT request.
       $.ajax("/api/burgers/" + id, {
