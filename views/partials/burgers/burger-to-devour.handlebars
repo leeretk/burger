@@ -1,22 +1,18 @@
 <div class="col s6">
 	{{#each burgers}}
-	{{#if this.devoured}}
-	<div class='burger-devoured'>
-		<div>
-			{{this.burger_name}}
-		</div>
+	{{#unless this.devoured}}
+	<div>
+		<form action="/burgers/{{this.id}}?_method=DELETE" method="POST">
+			<button type="submit" class="delete-burger button-add-burger" data-id="{{id}}"
+				data-newDevour="{{devour}}">{{this.burger_name}}
+			</button>
+		</form>
 	</div>
-	{{/if}}
+	{{/unless}}
 	{{/each}}
 </div>
 
-<form action="/{{this.id}}?_method=PUT" method="POST">
-
-	<button type="submit" class="delete-burger button-delete-burger" data-id="{{id}}" data-newDevour="{{devour}}">
-			{{#if devour}}
-			{{else}}
-			{{/if}}
-	</button>
-
-</form>
+<audio id="myAudio">
+  <source src="/public/assets/mp3/Bite-SoundBible.com-2056759375.mp3" type="audio/ogg">
+ </audio>
 

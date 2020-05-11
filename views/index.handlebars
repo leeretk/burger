@@ -25,8 +25,8 @@
         <div class="form-group">
           <p class="card-text ">
               <div class="col s6 text-center">
-                      <label for="devour-burger">
-                        {{>burgers/burger-to-devour devoured=false}}
+                      <label for="devour-burger" class="button-add-burger">
+                        {{> burgers/burger-to-devour}}
                       </label>
                 <div>
           </p>
@@ -70,7 +70,7 @@
     <p class="card-text"></p>
     <div class="form-group">
       <label for="devoured">
-        {{>burgers/burger-to-devour}}
+        {{> burgers/burger-devoured}}
       </label>
     </div>
   </div>

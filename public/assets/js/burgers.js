@@ -14,6 +14,12 @@ $(function() {
             devoured: newDevour
         };
 
+        var myAudio = document.getElementById("myAudio"); 
+
+        function playAudio() { 
+          x.play(myAudio); 
+        } 
+
       // Send the PUT request.
       $.ajax("/api/burgers/" + id, {
               type: "PUT",
