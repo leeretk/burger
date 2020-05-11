@@ -57,6 +57,8 @@ $(function() {
 
     // DELETE Burger.
     $(".delete-burger").on("click", function (event) {
+           event.preventDefault();
+
           var id = $(this).data("id");
 
           // Send the DELETE request.

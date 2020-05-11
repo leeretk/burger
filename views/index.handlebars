@@ -26,7 +26,7 @@
           <p class="card-text ">
               <div class="col s6 text-center">
                       <label for="devour-burger" >
-                        {{> burgers/burger-to-devour}}
+                        {{> burgers/burger-to-devour devoured=false}}
                                         <audio id="myAudio">
                   <source src="/public/assets/mp3/Bite-SoundBible.com-2056759375.mp3" type="audio/ogg">
                 </audio>
@@ -73,9 +73,9 @@
     <br>
     <p class="card-text"></p>
     <div class="form-group">
-      <strong><label for="devoured">
-        {{> burgers/burger-devoured}}
-      </label></strong>
+      <label for="devoured"><strong>
+        {{> burgers/burger-devoured devoured=true}}</strong>
+      </label>
     </div>
   </div>
 </div>
