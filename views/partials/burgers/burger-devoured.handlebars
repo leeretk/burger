@@ -1,0 +1,16 @@
+
+<form action="/{{this.id}}?_method=DELETE" method="POST">
+  <button type="submit" class="button-add-burger"></button>
+</form>
+
+<div class="col s6">
+	{{#each burgers}}
+	{{#if this.devoured}}
+	<div class='burger-devoured'>
+		<div>
+			{{this.burger_name}}
+		</div>
+	</div>
+	{{/if}}
+	{{/each}}
+</div>

@@ -1,0 +1,161 @@
+<html lang="en"><head>
+	<meta charset="UTF-8">
+		<link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css">
+		<title>EAT-DA-BURGER!</title>
+		<script src="https://code.jquery.com/jquery.js"></script>
+   	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="/assets/js/burgers.js"></script>
+	</head>
+
+<body>
+
+	@@ -0,0 +1,107 @@
+<div class="text-center wrapper">
+
+  <h1 class="text-center" style="color: aliceblue;">Eat-Da-Burger!</h1>
+  <h2 class="text-center" style="color: aliceblue;">Everybody Wants Some!</h2>
+
+  <div class="card">
+    <div class="card-deck">
+      <div class="card text-center">
+        <iframe src="https://www.youtube.com/embed/CxZy3Tr2wQM"></iframe>
+      </div>
+    </div>
+    <div>
+  <div>
+  
+  <div>
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" src="assets/img/bunTop.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Click a Burger or Topping to Devour it!</h5>
+            <label for="devoured"><div class="col s6">
+            <div>
+
+              <form action="/burgers/1?_method=PUT" method="POST">
+                <button type="submit" class="devour-burger"> Bacon Cheeseburger</button>
+              </form>
+
+            </div>
+
+            <div>
+
+              <form action="/burgers/2?_method=PUT" method="POST">
+                <button type="submit" class="devour-burger"> Mushroom Swiss Cheeseburger</button>
+              </form>
+
+            </div>
+
+            <div>
+
+              <form action="/burgers/3?_method=PUT" method="POST">
+                <button type="submit" class="devour-burger"> Beefy Cheesy Sliders</button>
+              </form>
+
+            </div>
+
+            <div>
+
+              <form action="/burgers/9?_method=PUT" method="POST">
+                <button type="submit" class="devour-burger"> tomatoe</button>
+              </form>
+
+            </div>
+
+            <div>
+
+              <form action="/burgers/14?_method=PUT" method="POST">
+                <button type="submit" class="devour-burger"> swiss cheese</button>
+              </form>
+
+            </div>
+
+      </div></label>
+            <img class="card-img" src="assets/img/bunBottom.jpg">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body cardBodyMiddle">
+          <div class="row text-center">
+            <p class="card-text">
+            </p><h3>I Want Some Too!!! <br><br> Burger's and Toppings you would like to Devour!</h3>
+            <p></p>
+            <form class="add-burger ">
+              <div>
+                <label for="new-burger-name"></label>
+                <input type="text" id="new-burger-name" name="burger_name" class="text-center" placeholder="I want some too!">
+              </div>
+              <button type="submit" class="button-add-burger">Add Burger and Toppings</button>
+          </form></div>
+          
+        </div>
+      </div>
+    <div class="card">
+      <img class="card-img-top" src="/assets/img/betterOffDeadBurger.jpg">
+        <div class="card-body">
+          <h5 class="card-title">Burgers Devoured!</h5>
+            <label for="devoured">
+
+      <div class="col s6">
+            <div>
+
+              <form action="/burgers/1?_method=DELETE" method="POST">
+                <button type="submit" class="devour-burger"> Bacon Cheeseburger</button>
+              </form>
+
+            </div>
+
+            <div>
+
+              <form action="/burgers/2?_method=DELETE" method="POST">
+                <button type="submit" class="devour-burger"> Mushroom Swiss Cheeseburger</button>
+              </form>
+
+            </div>
+
+            <div>
+
+              <form action="/burgers/3?_method=DELETE" method="POST">
+                <button type="submit" class="devour-burger"> Beefy Cheesy Sliders</button>
+              </form>
+
+            </div>
+
+            <div>
+
+              <form action="/burgers/9?_method=DELETE" method="POST">
+                <button type="submit" class="devour-burger"> tomatoe</button>
+              </form>
+
+            </div>
+
+            <div>
+
+              <form action="/burgers/14?_method=DELETE" method="POST">
+                <button type="submit" class="devour-burger"> swiss cheese</button>
+              </form>
+
+            </div>
+
+      </div></label>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+	<footer class="burgerFooter">
+		<div class="footer-copyright">
+			<div class="container">
+				<a class="grey-text text-lighten-4 right" href="https://leeretk.github.io">Portfolio</a>
+			</div>
+		</div>
+	</footer>
+
+</body></html>

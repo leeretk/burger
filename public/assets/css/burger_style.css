@@ -67,3 +67,6 @@ input {
   border-radius: 0%;
   border: maroon;
 }
+ul li {
+  list-style: none;
+}

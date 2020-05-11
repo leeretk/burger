@@ -19,7 +19,7 @@ router.get("/", function(req, res) {
 
 //create burger model call --- has column names (name and devoured) -- sends the actual value
 router.post("/api/burgers", function(req, res) {
-  burgers.create([
+  burger.create([
     "burger_name" ,"devoured"], 
     [
       req.body.burger_name
@@ -31,7 +31,6 @@ router.post("/api/burgers", function(req, res) {
   });
   console.log("POST PROCESSED")
 });
-
 
 
 router.put("/api/burgers/:id", function(req, res) {
@@ -66,6 +65,7 @@ router.delete("/api/burgers/:id", function(req, res) {
     } else {
       res.status(200).end();
     }
+    console.log("DELETE WAS PROCESS")
   });
 });
 

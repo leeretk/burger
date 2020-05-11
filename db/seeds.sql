@@ -1,4 +1,7 @@
-INSERT INTO burgers (burger_name) 
-VALUES ('Bacon Cheeseburger'), 
- ('Mushroom Swiss Cheeseburger'), 
- ('Beefy Cheesy Sliders') 
+
+USE burgers_db;
+
+INSERT INTO burgers (burger_name, devoured) 
+VALUES ('Bacon Cheeseburger','0'), 
+ ('Mushroom Swiss Cheeseburger','1'), 
+ ('Beefy Cheesy Sliders','0') 

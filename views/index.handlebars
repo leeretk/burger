@@ -18,94 +18,62 @@
 //======================== --}}
 <div class="card-deck">
   <div class="card">
+    <img class="card-img-top" src="assets/img/bunTop.jpg">
 
-      <img class="card-img-top" src="assets/img/bunTop.jpg">
-
-        <div class="card-body">
-
-          <h5 class="card-title">Click a Burger or Topping to Devour it!
-          </h5>
-          
-          <form class="add-burger">
-
-              <div class="form-group">
-
-                    <p class="card-text ">
-                        <div class="col s6 new-burger-name">
-                            <ul>
-                              {{#each burgers}}
-                              {{#unless devoured}}
-                                   <li>{{>burgers/burger-block devoured=true}}</li>
-                                {{/unless}}
-                              {{/each}}
-                            </ul>                  
-                        <div>
-                    </P>
-  
-                <label for="devour-burger"></label>
-          
-                <button type="submit"></button>
-              </div>
-          
-          </form>
-    
-          <img class="card-img" src="assets/img/bunBottom.jpg">
-        </div>
+    <div class="card-body">
+      <h5 class="card-title">Click a Burger or Topping to Devour it!</h5>
+      <form class="add-burger">
+        <div class="form-group">
+          <p class="card-text ">
+          <div class="col s6">
+            <label for="devour-burger">
+              {{>burgers/burger-to-devour devoured=false}}
+            </label>
+            <div>
+              </p>
+            </div>
+      </form>
+      <img class="card-img" src="assets/img/bunBottom.jpg">
     </div>
+  </div>
 </div>
-    </div>
+</div>
 
 {{!--//ADD A NEW BURGER OR TOPPING
 //======================== --}}
-        <div class="card">
+        <div class="card text-center">
           <div class="card-body cardBodyMiddle">
-            <div class="row text-center">
+            <div class="row">
               <p class="card-text">
               <h3>I Want Some Too!!! <br><br> Burger's and Toppings you would like to Devour!</h3>
               </p>
-                    
-          {{!-- //create new burger form --}}
               <form class="add-burger ">
-
                 <div>
-                  <label for="new-burger-name"></label>
-                  <input type="text" id="new-burger-name" name="burger_name" class="text-center" placeholder="I want some too!">
+                  <label for="new-burger-name" ></label>
+                  <input type="text" id="new-burger-name" name="burger_name" placeholder="I want some too!">
                 </div>
-
                 <button type="submit" class="button-add-burger">Add Burger and Toppings</button>
-
               </form>
             </div>
           </div>
-         
         </div>
 
-        <div class="card">
-          <img class="card-img-top" src="/assets/img/betterOffDeadBurger.jpg">
-          
-          {{!-- //-burgers devoured --}}
-          <div class="card-body">
-            <h5 class="card-title">Burgers to Devour!</h5>
-            <div class="col s6">
-              <ul>
-                    {{#each burgers}}
-                     {{#if devoured}}
-                        {{>burgers/burger-block devoured=false}}
-                    {{/if}}
-                    {{/each}}
-              </ul>
-            </div>
-            <br>
-            <p class="card-text">YUMMY, YUMMY, YUMMY!</p>
-            
-           <div class="form-group">
-              <label for="devoured">Hungry?</label>
-           </div>
+{{!-- //-burgers devoured --}}
+<div class="card">
+  <img class="card-img-top" src="/assets/img/betterOffDeadBurger.jpg">
+  <div class="card-body">
+    <h5 class="card-title">Burgers Devoured!</h5>
+    <div class="col s6">
+    </div>
+    <br>
+    <p class="card-text">Click to Delete Devoured Burger</p>
+    <div class="form-group">
+      <label for="devoured">
+        {{>burgers/burger-to-devour devoured=false}}
+      </label>
+    </div>
+  </div>
+</div>
+</div>
 
-          </div>
-
-        </div>
-      </div>
-
-
-    </div> {{!--  end wrapper --}}
+</div> {{!--  end wrapper --}}

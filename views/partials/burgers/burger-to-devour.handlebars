@@ -1,0 +1,15 @@
+<form action="/burgers/14?_method=DELETE" method="POST">
+                <button type="submit" class="devour-burger"> swiss cheese</button>
+</form>
+		
+		<div class="col s6">
+			{{#each burgers}}
+			{{#unless this.devoured}}
+			<div>
+				<form action="/burgers/{{this.id}}?_method=PUT" method="POST">
+					<button type="submit" class='devour-burger '> {{this.burger_name}}</button>
+				</form>
+			</div>
+			{{/unless}}
+			{{/each}}
+		</div>
