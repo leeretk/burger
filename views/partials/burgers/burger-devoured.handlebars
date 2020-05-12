@@ -1,13 +1,15 @@
+
 <div class="col s6">
 	{{#each burgers}}
-	{{#unless this.devoured}}
+	{{#if this.devoured}}
 	<div>
 		<form action="/burgers/{{this.id}}?_method=DELETE" method="POST">
 			<button type="submit" class="delete-burger button-delete-burger" data-id="{{id}}"
-				data-newDevour="{{devour}}">{{this.burger_name}}
+				data-newDevour="{{devour}}">
+				{{this.burger_name}}
 			</button>
 		</form>
 	</div>
-	{{/unless}}
+	{{/if}}
 	{{/each}}
 </div>

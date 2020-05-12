@@ -41,7 +41,7 @@ router.put("/api/burgers/:id", function(req, res) {
 //sends the value of what to update and then create the condition on ln 27 and pass the condition on line 35. 
   burger.update(
     {
-      devoured: req.body.devoured
+      devoured: 1
     },
     condition,
     function(result) {
