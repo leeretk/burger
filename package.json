@@ -1,6 +1,9 @@
 {
   "name": "mvc_design",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.16.x"
+  },
   "description": "-[] MySQL\r -[] Node\r -[] Express\r -[] Handlebars\r -[] ORM\r -[] Use Node and MySQL to query and route data\r -[] Use Handlebars to generate  HTML\r -[] Deploy to Heroku",
   "main": "server.js",
   "scripts": {
@@ -27,5 +30,7 @@
   "bugs": {
     "url": "https://github.com/leeretk/Eat-Da-Burger/issues"
   },
-  "homepage": "https://github.com/leeretk/Eat-Da-Burger#readme"
+  "homepage": "https://github.com/leeretk/Eat-Da-Burger#readme",
+ "keywords": []
 }
+
