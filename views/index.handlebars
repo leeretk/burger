@@ -26,12 +26,9 @@
           <p class="card-text ">
               <div class="col s6 text-center">
                       <label for="devour-burger" >
-                        {{> burgers/burger-to-devour devoured=false}}
-                                        <audio id="myAudio">
-                  <source src="/public/assets/mp3/Bite-SoundBible.com-2056759375.mp3" type="audio/ogg">
-                </audio>
-                {{!-- class="button-add-burger" --}}
-                      </label>
+                        {{> burgers/burger-to-devour devoured=0}}
+                  <audio id="myAudio"><source src="/public/assets/mp3/Bite-SoundBible.com-2056759375.mp3" type="audio/ogg"></audio>
+                </label>
                 <div>
           </p>
             </div>
@@ -74,7 +71,7 @@
     <p class="card-text"></p>
     <div class="form-group">
       <label for="devoured"><strong>
-        {{> burgers/burger-devoured devoured=true}}</strong>
+        {{> burgers/burger-devoured}}</strong>
       </label>
     </div>
   </div>

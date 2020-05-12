@@ -17,9 +17,9 @@ $(function() {
         var myAudio = document.getElementById("myAudio"); 
 
         function playAudio() { 
-          x.play(myAudio); 
+          x.play(); 
         } 
-        play();
+        play(myAudio);
 
       // Send the PUT request.
       $.ajax("/api/burgers/" + id, {
