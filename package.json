@@ -1,36 +1,28 @@
 {
-  "name": "mvc_design",
+  "name": "burger",
   "version": "1.0.0",
-  "engines": {
-    "node": "12.16.x"
-  },
-  "description": "-[] MySQL\r -[] Node\r -[] Express\r -[] Handlebars\r -[] ORM\r -[] Use Node and MySQL to query and route data\r -[] Use Handlebars to generate  HTML\r -[] Deploy to Heroku",
+  "description": "## Technology",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "eslint": "^7.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "handlebars": "^4.7.6",
     "mysql": "^2.18.1"
   },
-  "devDependencies": {
-    "handlebars-helper-css": "^0.1.0"
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leeretk/Eat-Da-Burger.git"
+    "url": "git+https://github.com/leeretk/burger.git"
   },
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/leeretk/Eat-Da-Burger/issues"
+    "url": "https://github.com/leeretk/burger/issues"
   },
-  "homepage": "https://github.com/leeretk/Eat-Da-Burger#readme",
- "keywords": []
+  "homepage": "https://github.com/leeretk/burger#readme"
 }
-
