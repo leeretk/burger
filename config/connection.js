@@ -2,11 +2,11 @@
 var mysql = require("mysql");
 require("dotenv").config();
 
-
+var PORT = process.env.PORT || 3006;
 
 var connection = mysql.createConnection({
   host: "localhost",
-  port: process.env.PORT || 3000,
+  port: process.env.PORT,
   user: "root",
   password: process.env.secret,
   database: "burgers_db"
