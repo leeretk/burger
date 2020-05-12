@@ -1,6 +1,7 @@
-# EAT-DA-BURGER
+# BURGER: LIVE LINK: https://dashboard.heroku.com/apps/agile-coast-95462
 
-!(https://github.com/leeretk/burger/blob/master/public/assets/img/appImage.JPG)
+
+![](https://github.com/leeretk/burger/blob/master/public/assets/img/appImage.JPG)
 
 ## Technology
 
@@ -23,4 +24,4 @@
 * Every burger is stored in a database, whether devoured or not.
 
 ## Deployed to Heroku 
-!(https://github.com/leeretk/burger/blob/master/public/assets/img/herokuDeployed.JPG)
+![](https://github.com/leeretk/burger/blob/master/public/assets/img/herokuDeployed.JPG)
