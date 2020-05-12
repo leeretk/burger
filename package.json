@@ -4,7 +4,7 @@
   "engines": {
     "node": "12.16.3"
   },
-  "description": "## Technology",
+  "description": "Build a Burger",
   "main": "server.js",
   "dependencies": {
     "dotenv": "^8.2.0",
