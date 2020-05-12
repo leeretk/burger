@@ -1,4 +1,4 @@
-# BURGER: LIVE LINK: https://dashboard.heroku.com/apps/agile-coast-95462
+# BURGER: LIVE LINK: https://agile-coast-95462.herokuapp.com/
 
 
 ![](https://github.com/leeretk/burger/blob/master/public/assets/img/appImage.JPG)
