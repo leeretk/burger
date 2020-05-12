@@ -23,7 +23,8 @@ router.post("/api/burgers", function(req, res) {
     "burger_name" ,"devoured"], 
     [
       req.body.burger_name
-      ,req.body.devoured]
+      ,0
+    ]
       ,function(result) {
        
       // Send back the ID of the new burger
