@@ -1,15 +1,17 @@
 # EAT-DA-BURGER
 
+!(https://github.com/leeretk/burger/blob/master/public/assets/img/appImage.JPG)
+
 ## Technology
 
--[] MySQL
--[] Node
--[] Express
--[] Handlebars
--[] ORM
--[] Use Node and MySQL to query and route data
--[] Use Handlebars to generate  HTML
--[] Deploy to Heroku
+* MySQL
+* Node
+* Express
+* Handlebars
+* ORM
+* Use Node and MySQL to query and route data
+* Use Handlebars to generate  HTML
+* Deploy to Heroku
 
 ## Overview
 
