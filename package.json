@@ -1,18 +1,8 @@
 {
-  "name": "mysql-sequalize-heroku",
+  "name": "burger",
   "version": "1.0.0",
-  "engines": {
-    "node": "12.16.3"
-  },
-  "description": "agile-coast-95462",
+  "description": "![] (<https://github.com/leeretk/burger/blob/master/public/assets/img/appImage.JPG>)",
   "main": "server.js",
-  "dependencies": {
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-handlebars": "^3.1.0",
-    "mysql": "^2.18.1"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -21,10 +11,18 @@
     "type": "git",
     "url": "git+https://github.com/leeretk/burger.git"
   },
-  "author": "Kamy Leeret",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/leeretk/burger/issues"
   },
-  "homepage": "https://github.com/leeretk/burger#readme"
+  "homepage": "https://github.com/leeretk/burger#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "mysql": "^2.18.1",
+    "sequelize": "^5.21.8"
+  }
 }
