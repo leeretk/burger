@@ -1,7 +1,6 @@
-# BURGER: LIVE LINK: https://agile-coast-95462.herokuapp.com/
+# BURGER: LIVE LINK: <https://agile-coast-95462.herokuapp.com/>
 
-
-![](https://github.com/leeretk/burger/blob/master/public/assets/img/appImage.JPG)
+![] (<https://github.com/leeretk/burger/blob/master/public/assets/img/appImage.JPG>)
 
 ## Technology
 
@@ -23,5 +22,6 @@
 * Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger will move to the right side of the page.
 * Every burger is stored in a database, whether devoured or not.
 
-## Deployed to Heroku 
-![](https://github.com/leeretk/burger/blob/master/public/assets/img/herokuDeployed.JPG)
+## Deployed to Heroku
+
+![] (<https://github.com/leeretk/burger/blob/master/public/assets/img/herokuDeployed.JPG)>
